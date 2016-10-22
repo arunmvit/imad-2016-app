@@ -2,7 +2,16 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
-        <script type="text/javascript" src="/ui/main.js">
+        <script>
+            console.log('Loaded!');
+            var counter = 0;
+            var but = document.getElementById('counter');
+            but.onClick = function(){
+                counter=+1;
+                var span = document.getElementById('count');
+                span.innerHtml = counter;
+            };
+
         </script>
     </head>
     <body>
@@ -14,8 +23,8 @@
 	    <h2>okpa</h2>
             Hi! arun gm here.
         </div>
-
-        <button id="counter">click me</button>  button clicked <span id="count">0</span>times<br/>
-
+        <div>
+         <button id="counter">click me</button>  button clicked <span id="count">0</span>times<br/>
+        </div>
     </body>
 </html>
